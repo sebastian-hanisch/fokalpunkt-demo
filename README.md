@@ -1,7 +1,6 @@
 # Koordination ohne Absprache: der offensichtliche Platz – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-fokalpunkt-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-fokalpunkt-demo.streamlit.app/)**
 
 Sechstes Stück der Reihe **Koordinationsspiele** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. Vehikel: **zwei Fahrer ohne Funkkontakt, die eine Wechselbrücke an demselben von m Übergabeplätzen übergeben sollen.** Treffen sie denselben Platz, sparen sie Umschlagzeit (1, auf Platz 1 nahe am Tor 1 + δ), sonst nichts. Viele Paare lernen je für sich mit **Softmax-REINFORCE**, bis sie sich treffen; die Demo fragt: **was unterscheidet das Paar, das zusammen gelernt hat, von einem Fremden (Eigenspiel gegen Fremdspiel), was lenkt die Konvention (ein „offensichtlicher“ Platz mit Bonus, eine gemeinsame Vorgeschichte, die Symmetrien des Spiels bei Other-Play) und wie weit trägt das Ergebnis kleiner Stichproben?**
 
@@ -145,4 +144,4 @@ Gebaut mit Streamlit, Plotly, NumPy und fpdf2.
 
 ---
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Koordinationsspiele: von Gleichwahl bis Kaskade](https://sebastianhanisch.net/konzepte-koordinationsspiele.html).
