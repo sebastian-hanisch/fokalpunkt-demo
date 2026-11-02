@@ -141,7 +141,7 @@ with st.expander("Erklärtabelle: was die Auswahl „Modus“ und die Regler tun
 | **Selbstspiel** | Beide Fahrer eines Paares lernen gegeneinander, wie sie sind. | Jedes Paar legt sich fest, aber auf irgendeinen Platz. |
 | **Other-Play: alle Plätze** | Je Runde wird der Platz des Partners durch eine zufällige Umbenennung **aller** Plätze übersetzt; Treffer, wenn A den übersetzten Platz wählt. | Richtig, wenn kein Platz ausgezeichnet ist (δ = 0). **Mit Bonus ist die Gruppe falsch**: Gegenbeispiel. |
 | **Other-Play: Platz 1 fest** | Wie oben, aber Platz 1 bleibt fest, die übrigen Plätze werden vertauscht: genau die Symmetrien des Spiels **mit** Bonus. | Bei m = 2 wirkungslos (nichts zu vertauschen). Bei größerem m braucht es einen kleineren Bonus und kostet Eigenspiel. |
-| **Bonus δ** | Platz 1 bringt 1 + δ statt 1. | Lenkt die Konvention auf Platz 1; die Wirkung ist eine glatte Kurve, keine Schwelle. |
+| **Bonus δ** | Platz 1 bringt 1 + δ statt 1. | Lenkt die Konvention auf Platz 1; im Gitter der Messreihen ist kein sprunghafter Anstieg erkennbar. |
 | **Lernrate η, Anfangsstreuung σ₀** | Wie stark ein Treffer die Parameter verschiebt; wie verschieden die Fahrer starten. | Verschieben, wie groß δ sein muss (E2). |
 | **Gemeinsame Vorgeschichte T₀** | Die Paare starten in Gruppen von den Parametern einer Referenz-Paarung, die T₀ Schritte gelernt hat (0: unabhängiger Start). | Macht Fremde in der Gruppe zu Bekannten (E4). |
         """
@@ -247,7 +247,7 @@ with tab1:
 # --- Tab 2 ---------------------------------------------------------------------------------------------------------------------------------
 with tab2:
     st.subheader("🔬 Experiment E2: Wie groß muss der Bonus sein?")
-    st.caption("Der Anteil der Paare, die sich auf Platz 1 festlegen, steigt **glatt** mit dem Bonus, es gibt keine Schwelle. Als Maß dient der **Halbweg-Bonus**: der Bonus, bei dem dieser Anteil die Mitte zwischen 1/m und 1 erreicht "
+    st.caption("Der Anteil der Paare, die sich auf Platz 1 festlegen, steigt im Gitter (Faktor 3 im Bonus) ohne sprunghaften Anstieg; eine Schwelle feiner als das Gitter ist nicht ausgeschlossen. Als Maß dient der **Halbweg-Bonus**: der Bonus, bei dem dieser Anteil die Mitte zwischen 1/m und 1 erreicht "
                "(log-interpoliert zwischen den Gitterpunkten). Darunter: wovon er abhängt und wie stark kleine Stichproben streuen.")
     if meas:
         e1_all = {int(mm): V.float_keys(r) for mm, r in meas["e1"].items()}
@@ -469,7 +469,7 @@ $$\text{Fremd} = \frac{1}{P(P-1)} \sum_{i \ne j} \sum_a p^A_i(a)\, p^B_j(a)$$
 
 $$\text{Fremd} = \frac{\sum_a n_a (n_a - 1)}{P(P-1)} \;\approx\; \sum_a \pi_a^2$$
 
-**Zufallsgrenze.** Sind die Konventionen gleichverteilt über die $m$ Plätze, so ist $\text{Fremd} - 1/m = (X - (m-1)) / (m(P-1))$ mit $X \sim \chi^2_{m-1}$, also die Standardabweichung
+**Zufallsgrenze.** Sind die Konventionen gleichverteilt über die $m$ Plätze, so ist $\text{Fremd} - 1/m = (X - (m-1)) / (m(P-1))$ mit $X \approx \chi^2_{m-1}$ (asymptotisch), also die Standardabweichung
 
 $$\mathrm{sd} = \frac{\sqrt{2(m-1)}}{m\,(P-1)}$$
 

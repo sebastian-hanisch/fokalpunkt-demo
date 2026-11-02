@@ -75,7 +75,7 @@ PRESETS = {
 PRESET_HELP = {
     "Standard (m = 4, ohne Bonus)": "Vier Plätze, kein Platz ausgezeichnet. Jedes Paar legt sich fest (Eigenspiel 0,997), aber ein Fremder trifft nur mit 0,250, so oft wie der Zufall (1/4). Vorgerechnet: 4 Blöcke zu je 500 Paaren.",
     "Fremde Paare (m = 16)": "Sechzehn Plätze: Eigenspiel 0,995, Fremdspiel 0,063 (Zufall: 1/16 = 0,0625). Je mehr Plätze, desto weniger trifft ein Fremder, obwohl jedes Paar sich trifft (4 Blöcke zu je 500 Paaren).",
-    "Kleiner Bonus (δ = 0,1)": "Platz 1 spart 10 % mehr Zeit. Bei vier Plätzen hebt das das Fremdspiel nur von 0,250 auf 0,262 (4 Blöcke zu je 500 Paaren); ein kleiner Vorteil ordnet die Paare kaum.",
+    "Kleiner Bonus (δ = 0,1)": "Platz 1 spart 10 % mehr Zeit. Bei vier Plätzen hebt das das Fremdspiel nur von 0,250 auf 0,262, mit anderen Seeds bis 0,27 (4 Blöcke zu je 500 Paaren); ein kleiner Vorteil verschiebt die Konventionen etwas, hebt das Fremdspiel aber kaum.",
     "Großer Bonus (δ = 1)": "Platz 1 spart doppelt so viel Zeit. Das Fremdspiel steigt auf 0,750, 86 % der Paare (0,863) legen sich auf Platz 1 fest (vier Plätze, 4 Blöcke zu je 500 Paaren).",
     "Gleiche Vorgeschichte (T₀ = 400)": "Die Paare starten in Gruppen von einer Referenz, die 400 Schritte gelernt hat. Fremde aus derselben Gruppe treffen sich mit 0,994, aus verschiedenen Gruppen mit 0,246; die Referenz selbst hat erst Eigenspiel 0,829 (vier Plätze, E4: 40 Referenzen mit je 25 Paaren, 4 Blöcke). Hier: 8 Referenzen.",
     "Other-Play, Platz 1 fest (m = 8, δ = 0,3)": "Training gegen Partner mit umbenannten Plätzen 2 bis 8, Platz 1 bleibt fest (die Symmetrien des Spiels mit Bonus). Fremdspiel 0,550 statt 0,202 im Selbstspiel; Preis: Eigenspiel 0,767 statt 0,997 (4 Blöcke zu je 500 Paaren).",

@@ -173,7 +173,7 @@ def verdict_e2_halfway(half: dict[int, tuple[str, float | None]]) -> tuple[str, 
     steps = [(a, b) for a, b in zip(vals[:-1], vals[1:]) if a is not None and b is not None]
     grow = sum(1 for a, b in steps if b > a)
     return "info", (f"**Halbweg-Bonus** (der Anteil der Paare auf Platz 1 erreicht die Mitte zwischen 1/m und 1): {'; '.join(parts)}. "
-                    f"Er wächst in {grow} von {len(steps)} Schritten von einer Platzzahl zur nächsten; es gibt keine scharfe Schwelle, der Anteil steigt glatt mit δ.")
+                    f"Er wächst in {grow} von {len(steps)} Schritten von einer Platzzahl zur nächsten; im Gitter ist kein sprunghafter Anstieg erkennbar, eine Schwelle feiner als das Gitter ist nicht ausgeschlossen.")
 
 
 def verdict_e2_sensitivity(half: dict[str, tuple[str, float | None]]) -> tuple[str, str]:
