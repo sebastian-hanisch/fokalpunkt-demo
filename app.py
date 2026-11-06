@@ -114,6 +114,19 @@ Weiter unten: fünf Tabs mit je einem **🔬 Experiment**, die Abschnitte **🚧
 """
 )
 
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/fokalpunkt-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Zwei Fahrer ohne Funkkontakt sollen eine **Wechselbrücke** (einen abnehmbaren Lkw-Aufbau) am **selben** von mehreren Übergabeplätzen übergeben. Treffen sie denselben Platz, sparen sie Umschlagzeit, sonst nicht. Viele Paare lernen je für sich durch Ausprobieren, bis sie sich treffen.
+
+Die Demo misst, wie oft ein Fahrer seinen **Partner** trifft (Eigenspiel) und wie oft einen **Fremden** aus einem anderen Paar (Fremdspiel). Sie zeigt, was die Wahl lenkt: ein ausgezeichneter Platz (ein **Fokalpunkt**, hier ein Platz nahe am Tor mit mehr Zeitersparnis), eine gemeinsame Vorgeschichte und das Training gegen vertauschte Plätze (**Other-Play**). **Lernregel und Eigennutz sind Modellannahmen, keine Aussagen über echte Fahrer oder Menschen.**
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/fokalpunkt-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
+
 with st.expander("Das Spiel und der Fokalpunkt in einem Absatz", expanded=True):
     st.markdown(
         r"""
@@ -432,6 +445,25 @@ st.markdown(
 
 st.markdown("---")
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/fokalpunkt-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind $m$ Plätze, ein Bonus $\delta \ge 0$ auf Platz 1 und $P$ Paare von Fahrern, die je mit Softmax-REINFORCE lernen; gesucht sind das Eigenspiel (Partner), das Fremdspiel (Fremder) und was die gelernte Konvention bestimmt. Die Herleitungen sind eigene Rechnung, durch Handrechnung, zweite Rechenwege und Simulation gestützt, nicht gegen Literatur geprüft.
+
+| Symbol | Bedeutung |
+|---|---|
+| $\theta_k,\ p_k$ | Parameter und Politik von Fahrer $k$ (A oder B eines Paares) |
+| $a,\ r$ | gewählter Platz und Belohnung |
+| $\delta,\ w(a)$ | Bonus und Treffer-Belohnung $w(1) = 1 + \delta$, sonst 1 |
+| $\eta,\ \sigma_0$ | Lernrate und Streuung der Anfangsparameter |
+| $p^A_i,\ p^B_i$ | Politiken von Spieler A und B des Paares $i$ |
+| $c_i,\ n_a,\ \pi_a$ | Konvention des Paares $i$, Zahl der Paare auf Platz $a$ und Anteil $n_a/P$ |
+| $\varphi$ | Umbenennung der Plätze (Other-Play) |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/fokalpunkt-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Lesehilfe.** Gegeben sind $m$ Plätze, ein Bonus $\delta \ge 0$ auf Platz 1 und $P$ Paare von Fahrern, die je mit Softmax-REINFORCE lernen; gesucht sind das Eigenspiel (Partner), das Fremdspiel (Fremder) und was die gelernte
